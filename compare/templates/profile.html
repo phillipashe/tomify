@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Snapshot by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Submit a Picture</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+	</head>
+	<body>
+		<div class="page-wrap">
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+                        <li><a href="/compare/"><span class="icon fa-home"></span></a></li>
+						<li><a href="/compare/profile/" class="active"><span class="icon fa-camera-retro"></span></a></li>
+						<li><a href="/compare/about"><span class="icon fa-file-text-o"></span></a></li>
+					</ul>
+				</nav>
+
+			<!-- Main -->
+				<section id="main">
+
+					<!-- Header -->
+						<header id="header">
+							<div>Tomify <span>by Phillip Ashe</span></div>
+						</header>
+
+        <div class = "submitform">
+          <form name = "form" enctype = "multipart/form-data" 
+             action = "{% url 'saved' %}" method = "POST" >{% csrf_token %}
+             
+             <div style = "max-width:470px;">
+                <center>
+                <h1>Send me a picture of Tom Brady!</h1>
+                   <!-- <input type = "text" style = "margin-left:20%;" 
+                       placeholder = "Name" name = "name" /> -->
+                </center>
+             </div>
+                
+             <br>
+             
+             <div style = "max-width:470px;">
+                <center> 
+                   <input type = "file" style = "margin-left:20%;" 
+                      placeholder = "Picture" name = "picture" />
+                </center>
+             </div>
+                
+             <br>
+             
+             <div style = "max-width:470px;">
+                <center> 
+                
+                   <button style = "border:0px;background-color:#4285F4; margin-top:8%; 
+                      height:35px; width:80%; margin-left:19%;" type = "submit" value = "Login" >
+                      <strong>Check</strong>
+                   </button>
+                   
+                </center>
+             </div>
+             
+          </form>
+        </div>
+          
+
+					<!-- Contact -->
+						<section id="contact">
+							<!-- Social -->
+								<div class="social column">
+									<h3>About Me</h3>
+									<p>My name is Phillip Ashe; I've had a lifelong interest in computers, and have been programming since high school.  I live in Western Massachusetts, about 70 minutes from Boston.  Although I've primarily worked with Java, C, and C++, I've found myself using Perl and PHP in my professional life.  I'm constantly applying myself to learn new technologies, so at a personal level, I've been learning the Django framework and OpenCV.  I have a strong interest in Machine Learning and AI, and a strong interest in web backend development.  Those two interests culminated in the project Tomify.</p>
+                                    <p>If it's not readily apparent, I'm a <b>HUGE</b> Boston sports fan.  With his 6th Super Bowl victory, I felt it best to commemorate Tom Brady, the greatest to ever play the game, by incorporating him into my latest project.</p>
+
+                                    <p><b style="font-size: 48px">GO PATS!</b></p>
+									<!--<h3>Follow Me</h3>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+                                    -->
+								</div>
+
+							<!-- Form -->
+								<div class="column">
+                                    <h3>Get in touch</h3>
+                                    <p><a href="mailto:ashephillip@gmail.com">ashephillip@gmail.com</a>
+                                    <!--
+									<h3>Get in Touch</h3>
+									<form action="#" method="post">
+										<div class="field half first">
+											<label for="name">Name</label>
+											<input name="name" id="name" type="text" placeholder="Name">
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input name="email" id="email" type="email" placeholder="Email">
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+										</div>
+										<ul class="actions">
+											<li><input value="Send Message" class="button" type="submit"></li>
+										</ul>
+									</form>
+                                    -->
+								</div>
+
+						</section>
+
+					<!-- Footer -->
+						<footer id="footer">
+							<div class="copyright">
+                                &copy;<b>2019 Phillip Ashe</b>
+							</div>
+						</footer>
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/skel.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>

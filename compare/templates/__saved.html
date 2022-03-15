@@ -1,0 +1,27 @@
+<html>
+   <body>
+   
+      {% if saved %}
+         {% if is_tom %}
+             <strong>This picture contains Tom Brady!</strong>
+             <div>
+                 <!-- <img src="{{ profile.picture.url }}"/> -->
+                 <!-- # update fields breaks the abilty to use "profile.picture.url" in template (removes /media from url)-->
+                 <img src="/media/pictures/{{ profile.picture.name }}"/>
+             </div>
+             <!-- <img src="/media/tom.jpg"/> -->
+         {% else %}
+             <strong>This picture did not contain Tom Brady.</strong>
+             <div>
+                 <!--<img src="{{ profile.picture.url }}"/>-->
+                 <img src="/media/pictures/{{ profile.picture.name }}"/>
+             </div>
+         {% endif %}
+      {% endif %}
+      
+      {% if not saved %}
+         <strong>Your profile was not saved.</strong>
+      {% endif %}
+      
+   </body>
+</html>
